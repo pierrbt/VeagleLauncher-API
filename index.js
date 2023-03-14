@@ -302,6 +302,50 @@ app.post('/api/games/list', async (req, res) => {
     res.send(games);
 });
 
+app.post('/api/games/install', async (req, res) => {
+   //  const { id, executable, link, size } = data;
+    res.header('Content-Type', 'application/json');
+    // Get id and token
+    const u_id = req.body.id;
+    const u_token = req.body.token;
+    const g_id = req.body.gameId;
+
+    if(!u_id)
+    {
+        res.send({success: false, message: "Id utilisateur incorrect"});
+        return;
+    }
+    if(!u_token)
+    {
+        res.send({success: false, message: "Mot de passe incorrect"});
+        return;
+    }
+    if(!g_id)
+    {
+        res.send({success: false, message: "Id du jeu incorrect"});
+        return;
+    }
+
+    const result = await UserModel.findOne({ where: { id: u_id, token: u_token } });
+
+    if(!result)
+    {
+        res.send({success: false, message: "Utilisateur introuvable"});
+        return;
+    }
+
+    const game = await GameModel.findOne({
+        attributes: ['id', 'name', 'installations', 'executable', 'path'],
+        where: { id: g_id }
+    })
+
+    console.log("Demande du jeu id : ", g_id);
+
+    res.send({success: true, message: "Installation du jeu", game: game});
+    return;
+
+});
+
 app.post('/api/games/add', async (req, res) => {
     res.header('Content-Type', 'application/json');
 
