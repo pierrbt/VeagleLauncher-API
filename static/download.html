@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Téléchargement</title>
+	<link rel="stylesheet" href="download.css">
+</head>
+<body>
+	<header>
+        <ul>
+            <li>
+                <a href="https://veagle.fr/" target="_blank">
+                    <img src="logo_veagle_black.png">
+                </a>
+            </li>
+            <li class="titles li-top">
+                <div class="title-bar">
+                    <h1>Griff</h1>
+                    <h2>Le lanceur de jeu nouvelle génération</h2>
+                </div>
+            </li>
+            <li class="li-top">
+                <a href="https://veagle.fr/" target="_blank">
+                    A propos
+                </a>
+            </li>
+            <li class="li-top">
+                <a href="#down">
+                    Téléchargement
+                </a>
+                
+            </li>
+            <li class="li-top">
+                <a href="index.html#more">
+                    Voir plus
+                </a>
+                
+            </li>
+        </ul>
+    </header>
+	<div class="container" id="down">
+		<div class="logo-container">
+			<a href="https://example.com/download" target="_blank">
+				<div>
+					<img src="logo-windows.png" alt="Logo Windows">
+				</div>				
+				<p>Cliquez pour télécharger Griff</p>
+			</a>
+		</div>
+		<div class="instructions">
+			<p>Veuillez choisir la version 32 bits ou 64 bits selon votre système d'exploitation.</p>
+			<div class="button-container">
+				<a href="https://example.com/download-32bits" class="button" target="_blank">32 bits</a>
+				<a href="https://example.com/download-64bits" class="button"target="_blank">64 bits</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+        <div class="footer-text">
+            <p>Griff est une création de VeagleDev - 2023</p>
+            <p>Mentions légales</p>
+        </div>
+    </footer>
+	
+	<script>
+	
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+	</script>
+	
+	
+
+</body>
+</html>

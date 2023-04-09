@@ -1,5 +1,5 @@
-
-const port = 3333
+const path = require('path')
+const port = 3444
 
 
 /*    IMPORT    */
@@ -39,7 +39,7 @@ const GameModel = sequelize.define('Jeux', Game, {});
 const app = express()
 app.use(express.json());
 app.use(cors())
-
+app.use(express.static(path.join(__dirname, 'static')));
 /*   ROUTES    */
 
 app.post('/api/login', async(req, res) => {
@@ -396,7 +396,7 @@ app.post('/api/games/add', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Griff-API is now listening on port ${port}`);
 });
 
 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez Griff, le lanceur de jeu nouvelle génération créé par VeagleDev. Facile d'utilisation avec une interface jolie et responsive, des bibliothèques privées et une grande bibliothèque publique. Griff est open-source et utilise les dernières technologies.">
+    <meta name="keywords" content="Griff, lanceur de jeu, VeagleDev, open-source, technologies, bibliothèques">
+    <meta name="author" content="VeagleDev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Griff</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="https://veagle.fr/" target="_blank">
+                    <img src="logo_veagle_black.png">
+                </a>
+            </li>
+            <li class="titles li-top">
+                <div class="title-bar">
+                    <h1>Griff</h1>
+                    <h2>Le lanceur de jeu nouvelle génération</h2>
+                </div>
+            </li>
+            <li class="li-top">
+                <a href="https://veagle.fr/" target="_blank">
+                    A propos
+                </a>
+            </li>
+            <li class="li-top">
+                <a href="download.html" class="fade">
+                    Téléchargement
+                </a>
+                
+            </li>
+            <li class="li-top">
+                <a href="#more">
+                    Voir plus
+                </a>
+                
+            </li>
+        </ul>
+    </header>
+    <main id="more">
+        <nav class="presentation">
+
+            <div class="pres-text">
+                <div class="p_info">
+                    <span class="p_title">Découvez Griff, le nouveau launcher</span>
+                    <span class="p_author">par l'équipe VeagleDev</span>
+                </div>
+                
+
+                <p class="desc">
+                    Découvrez le tout nouveau launcher créé par Veagle, il fait suite au premier launcher créé il y a quelques mois mais avec
+                    un code entièrement réimaginé et avec un système bien plus élaboré pour l'installation des jeux.
+                </p>
+            
+            </div>
+
+
+
+            <div class="pres-img">
+                <img src="launcher.png">
+                <span>Page principale</span>
+            </div>
+            
+
+        </nav>
+        <nav class="points-cles">
+            <div class="good">
+                <h2>Les points forts : </h2>
+                <ol>
+                    <li>Facile d'utilisation</li>
+                    <li>Interface jolie et responsive</li>
+                    <li>Bibliothèques privées</li>
+                    <li>Grande bibliothèque publique</li>
+                    <li>Application open-source</li>
+                    <li>Équipe de développement active</li>
+                    <li>Technologies récentes (voir dessous)</li>
+                </ol>
+            </div>
+
+            <hr />
+
+            <div class="poor">
+                <h2>Les points faibles : </h2>
+                <ol>
+                    <li>Jeux payants non-dispo sur la version gratuite</li>
+                    <li>Utilisation d'Electron qui peut être un peu long</li>
+                    <li>Utilisation d'une archive unique .7z</li>
+                    <li>Application encore en développement</li>
+                    <li>Encore en version de test</li>
+                </ol>
+            </div>
+        </nav>
+        
+        <nav class="os">
+            <div class="os-top">
+                <h2>Open-source</h2>
+                <img class="img-opensrc" src="os.png">
+            </div>
+            
+
+            <div>
+                <h3>C'est quoi l'open-source ?</h3>
+                <p>
+                    L'open-source désigne un logiciel dont le code source est disponible publiquement et 
+                    auquel chacun y a accès pour l'adapter à son besoin, l'améliorer et cela créé donc 
+                    une collaboration sans but lucratif entre programmeurs afin de créer un produit 
+                    fini fonctionnel et auquel chacun peut ajouter des modifications et ajouts. 
+                    Pour en apprendre plus, 
+                    <a href="https://fr.wikipedia.org/wiki/Open_source" target="blank">
+                        visitez la page Wikipedia
+                    </a>
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Notre projet</h3>
+                <p>
+                    Ce projet est un projet open-source <a href="https://github.com/VeagleDev/VeagleLauncher">hébergé sur GitHub</a> par <a href="https://github.com/pierrbt">@pierrbt</a>.
+                    
+                    Il a été programmé par l'équipe VeagleDev ainsi que par les collaborateurs.
+                    Cette application étant encore en développement, toutes les propositions
+                    ainsi que les ajouts/changements de code sont bienvenus.
+                    
+                    Vous pouvez ainsi accéder à l'entièreté du code pour comprendre comment
+                    le Launcher fonctionne et pour en vérifier par exemple la sécurité.
+    
+                </p>
+            </div>
+        </nav>
+
+        <button class="download fade" onclick="
+            window.location.href = `download.html`
+        ">Télécharger</button>
+
+        <div style="height: 120px;"></div>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <p>Griff est une création de VeagleDev - 2023</p>
+            <p>Mentions légales</p>
+        </div>
+    </footer>
+	
+	
+	<script>
+	
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+	</script>
+    
+</body>
+</html>
